@@ -23,10 +23,10 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: 'build/**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    TargetFolder: 'build'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    pathToPublish: 'build'
     artifactName: 'drop'
     publishLocation: 'Container'
